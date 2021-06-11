@@ -1,0 +1,22 @@
+<!doctype html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Gerenciando formularios </title>
+</head>
+<body>
+	<h1>Formulario</h1>
+	<form action="#" th:action="@{/olaFormulario}" th:object="${olaFormulario}" method="post" >
+		<p>
+			Id: <input type="text" th:field="*{id}" />
+		</p>
+		<p> 
+			Message <input type="text" th:field="*{conteudo}" />
+		</p>
+		<p>
+			<input type="submit" value="Submit" /> 
+			<input type="reset" value="Reset" />
+		</p>
+	</form>
+</body>
+</html>
